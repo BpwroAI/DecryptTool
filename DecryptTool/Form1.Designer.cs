@@ -59,10 +59,24 @@
             radioButton4 = new RadioButton();
             label8 = new Label();
             textBox5 = new TextBox();
+            tabPage4 = new TabPage();
+            button3 = new Button();
+            textBox12 = new TextBox();
+            label17 = new Label();
+            textBox11 = new TextBox();
+            label16 = new Label();
+            radioButton7 = new RadioButton();
+            textBox10 = new TextBox();
+            label15 = new Label();
+            label14 = new Label();
+            textBox9 = new TextBox();
+            label13 = new Label();
+            radioButton6 = new RadioButton();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
+            tabPage4.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -71,6 +85,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -422,6 +437,154 @@
             textBox5.TabIndex = 9;
             textBox5.Text = "0x00";
             // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(button3);
+            tabPage4.Controls.Add(textBox12);
+            tabPage4.Controls.Add(label17);
+            tabPage4.Controls.Add(textBox11);
+            tabPage4.Controls.Add(label16);
+            tabPage4.Controls.Add(radioButton7);
+            tabPage4.Controls.Add(textBox10);
+            tabPage4.Controls.Add(label15);
+            tabPage4.Controls.Add(label14);
+            tabPage4.Controls.Add(textBox9);
+            tabPage4.Controls.Add(label13);
+            tabPage4.Controls.Add(radioButton6);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(812, 509);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "バイナリカット";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Yu Gothic UI", 12F);
+            button3.Location = new Point(692, 439);
+            button3.Name = "button3";
+            button3.Size = new Size(79, 43);
+            button3.TabIndex = 28;
+            button3.Text = "RUN";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // textBox12
+            // 
+            textBox12.Font = new Font("Yu Gothic UI", 12F);
+            textBox12.Location = new Point(134, 427);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(103, 29);
+            textBox12.TabIndex = 27;
+            textBox12.Text = "0";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.FlatStyle = FlatStyle.Flat;
+            label17.Font = new Font("Yu Gothic UI", 12F);
+            label17.Location = new Point(30, 430);
+            label17.Name = "label17";
+            label17.Size = new Size(362, 63);
+            label17.TabIndex = 26;
+            label17.Text = "スキップ回数\r\n\r\n指定した分だけ検索をスキップします（10進数で入力）";
+            // 
+            // textBox11
+            // 
+            textBox11.Font = new Font("Yu Gothic UI", 12F);
+            textBox11.Location = new Point(93, 317);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(650, 29);
+            textBox11.TabIndex = 25;
+            textBox11.Text = "0A 0B";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.FlatStyle = FlatStyle.Flat;
+            label16.Font = new Font("Yu Gothic UI", 12F);
+            label16.Location = new Point(30, 320);
+            label16.Name = "label16";
+            label16.Size = new Size(366, 63);
+            label16.TabIndex = 24;
+            label16.Text = "バイナリ\r\n\r\n16進バイナリで指定（0xとスペースの有無どちらも対応）";
+            // 
+            // radioButton7
+            // 
+            radioButton7.AutoSize = true;
+            radioButton7.Font = new Font("Yu Gothic UI", 12F);
+            radioButton7.Location = new Point(30, 270);
+            radioButton7.Name = "radioButton7";
+            radioButton7.Size = new Size(423, 25);
+            radioButton7.TabIndex = 23;
+            radioButton7.Text = "バイナリ指定（指定したバイナリの前までバイナリを削除します）";
+            radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // textBox10
+            // 
+            textBox10.Font = new Font("Yu Gothic UI", 12F);
+            textBox10.Location = new Point(435, 147);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(173, 29);
+            textBox10.TabIndex = 21;
+            textBox10.Text = "0xFF";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.FlatStyle = FlatStyle.Flat;
+            label15.Font = new Font("Yu Gothic UI", 12F);
+            label15.Location = new Point(345, 150);
+            label15.Name = "label15";
+            label15.Size = new Size(268, 63);
+            label15.TabIndex = 22;
+            label15.Text = "範囲\r\n\r\n10進数、16進数(0xで指定)どちらでも可";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.FlatStyle = FlatStyle.Flat;
+            label14.Font = new Font("Yu Gothic UI", 12F);
+            label14.Location = new Point(30, 150);
+            label14.Name = "label14";
+            label14.Size = new Size(50, 21);
+            label14.TabIndex = 20;
+            label14.Text = "offset";
+            // 
+            // textBox9
+            // 
+            textBox9.Font = new Font("Yu Gothic UI", 12F);
+            textBox9.Location = new Point(86, 147);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(173, 29);
+            textBox9.TabIndex = 19;
+            textBox9.Text = "0x00";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.FlatStyle = FlatStyle.Flat;
+            label13.Font = new Font("Yu Gothic UI", 12F);
+            label13.Location = new Point(30, 30);
+            label13.Name = "label13";
+            label13.Size = new Size(346, 21);
+            label13.TabIndex = 18;
+            label13.Text = "指定した範囲、或いは指定した条件でバイナリをカット";
+            // 
+            // radioButton6
+            // 
+            radioButton6.AutoSize = true;
+            radioButton6.Checked = true;
+            radioButton6.Font = new Font("Yu Gothic UI", 12F);
+            radioButton6.Location = new Point(30, 100);
+            radioButton6.Name = "radioButton6";
+            radioButton6.Size = new Size(92, 25);
+            radioButton6.TabIndex = 12;
+            radioButton6.TabStop = true;
+            radioButton6.Text = "範囲指定";
+            radioButton6.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -437,6 +600,8 @@
             tabPage2.PerformLayout();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -473,5 +638,18 @@
         private TextBox textBox8;
         private Button button2;
         private Label label12;
+        private TabPage tabPage4;
+        private Label label13;
+        private RadioButton radioButton6;
+        private RadioButton radioButton7;
+        private TextBox textBox10;
+        private Label label15;
+        private Label label14;
+        private TextBox textBox9;
+        private TextBox textBox12;
+        private Label label17;
+        private TextBox textBox11;
+        private Label label16;
+        private Button button3;
     }
 }
