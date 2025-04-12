@@ -98,20 +98,25 @@ namespace DecryptTool
 
             try
             {
-                if (keyText.StartsWith("0x", StringComparison.OrdinalIgnoreCase))
+                // "0x" を削除（複数ある場合にも対応）し、前後の空白を削除
+                string cleaned = keyText.Replace("0x", "", StringComparison.OrdinalIgnoreCase).Trim();
+
+                // スペースで区切られている場合（例: AA BB CC）
+                if (cleaned.Contains(" "))
                 {
-                    keyText = keyText.Substring(2).Replace(" ", ""); // "0x" を削除しスペース除去
+                    string[] hexParts = cleaned.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    return hexParts.Select(h => Convert.ToByte(h, 16)).ToArray();
                 }
 
-                // スペース区切りの 16 進数対応
-                if (keyText.All(c => "0123456789ABCDEFabcdef".Contains(c)))
+                // スペース無しの連続16進数（例: AABBCCDD）に対応
+                if (cleaned.All(c => "0123456789ABCDEFabcdef".Contains(c)) && cleaned.Length % 2 == 0)
                 {
-                    return Enumerable.Range(0, keyText.Length / 2)
-                        .Select(i => Convert.ToByte(keyText.Substring(i * 2, 2), 16))
+                    return Enumerable.Range(0, cleaned.Length / 2)
+                        .Select(i => Convert.ToByte(cleaned.Substring(i * 2, 2), 16))
                         .ToArray();
                 }
 
-                // UTF-8 文字列キーとして処理
+                // UTF-8 文字列として処理
                 return Encoding.UTF8.GetBytes(keyText);
             }
             catch
@@ -119,6 +124,7 @@ namespace DecryptTool
                 return null;
             }
         }
+        
 
         private int ParseNumber(string text)
         {

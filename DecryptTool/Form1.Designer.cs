@@ -506,9 +506,9 @@
             label16.Font = new Font("Yu Gothic UI", 12F);
             label16.Location = new Point(30, 320);
             label16.Name = "label16";
-            label16.Size = new Size(366, 63);
+            label16.Size = new Size(647, 63);
             label16.TabIndex = 24;
-            label16.Text = "バイナリ\r\n\r\n16進バイナリで指定（0xとスペースの有無どちらも対応）";
+            label16.Text = "バイナリ\r\n\r\n16進バイナリ、文字列か自動認識します。16進バイナリは0xAA BB、AABB形式どちらでも認識します。\r\n";
             // 
             // radioButton7
             // 
